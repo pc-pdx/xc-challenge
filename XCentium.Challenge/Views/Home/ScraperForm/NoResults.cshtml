@@ -1,0 +1,16 @@
+﻿@model string
+
+@{
+	Layout = null;
+}
+
+<div class="row">
+	@if (null != Model)
+	{
+		<p class="text-warning">There were no results for &lsquo;@Model&rsquo;</p>
+	}
+	else
+	{
+		<p class="text-info">Have a search!</p>
+	}
+</div> 	

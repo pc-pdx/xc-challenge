@@ -1,0 +1,21 @@
+﻿@model XCentium.Challenge.Models.ScrapedPageViewModel
+
+
+
+@if (Model.ImageList.Any())
+{
+	<div class="galleria">
+		@foreach (var result in Model.ImageList)
+		{
+			<img src="@result.ImageUrl" alt="@result.AltText" class="gallery" />
+		}
+	</div>
+}
+else
+{
+	<p>NO IMAGES FOUND</p>
+}
+
+
+
+ 

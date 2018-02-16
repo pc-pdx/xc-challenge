@@ -1,0 +1,87 @@
+######## GENERAL IGNORES #######
+
+# ignore logs, OS cache files
+*.log
+ehthumbs.db
+Thumbs.db
+*.old
+
+######## MAC JUNK #######
+.DS_Store*
+._*
+
+######## GENERAL .NET IGNORES ########
+
+# Ignore binaries in the source
+*/bin/*
+*/obj
+*/Areas/*/bin/*
+*/Areas/*/obj
+packages
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Roslyn cache directories
+*.ide/
+.vs/
+
+# Ignore generated Version.cs files
+Source/*/Properties/Version.cs
+
+######## SITECORE IGNORES ########
+
+Source/*.Web/sitemaps
+Source/*.Web/temp
+Source/*.Web/MediaCache
+Source/*.Web/App_Data/MediaCache
+Source/*.Web/sitecore modules/debug
+Source/*.Web/sitecore/shell/Applications/debug
+Source/*.Web/sitecore/shell/Controls/debug
+Source/*.Web/sitecore/shell/Override/debug
+Source/*.Web/sitecore/admin/packages/*.update
+Source/*.Web/App_Config/ConnectionStrings.config
+
+# js files emitted by page editor
+Source/*.Web/sitecore/shell/Applications/Page Modes/Ouput
+
+Source/*.Web/App_Config/Include/zSites/*/**/*.config
+
+# ignore all folders in web data folder but keep readme files within them (prevent empty folder deletion)
+Source/*.Web/App_Data/*/*
+!Source/*.Web/App_Data/*/readme.txt
+!Source/*.Web/App_Data/serialization/*
+!Source/*.Web/App_Data/AzureOverrideFiles/*
+!Source/*.Web/App_Data/AzureEnvironments/*
+!Source/*.Web/App_Data/tools/*
+
+# ignore rocks connections files
+*.csproj.sitecore
+
+######## DEBUT IGNORES ########
+# ignore synthesis generation history files
+*.cs.[1-9]
+
+######## GENERATED FED IGNORES ########
+# Ignore generated fed stuffs - from the top down!
+# when developing a NEW site (area), switching branches causes a noisy nightmare with 5000+ 'changed' files as result of the respective areas .gitignore being switched out with the branch :eyeroll:
+Source/*.Web/Areas/*/Assets/dist/
+Source/*.Web/Areas/*/Assets/src/node_modules/
+Source/*.Web/Areas/*/Assets/src/sassdoc-theme/
+
+######## MISC IGNORES ########
+
+# Beaver project build files
+Build/System/Support/Beaver/bin/Debug
+Build/System/Support/Beaver/obj
+
+# NuGet packages
+[Pp]ackages/*
+![Pp]ackages/repositories.config
+
+# local deploy target
+Build/Environments/local/
+

@@ -1,0 +1,19 @@
+﻿@model XCentium.Challenge.Models.ScrapedPageViewModel
+@{
+	if (false == Model.WordFrequencyStats.Any())
+	{
+		return;
+	}
+}
+
+@foreach (var result in Model.WordFrequencyStats.Take(10))
+{
+	<span>
+		(@result.Value)
+		<strong style="font-size: @(    (result.Value % 10) > 5 ? 5 : (result.Value % 10)  )rem">@result.Key</strong>
+		
+		 
+	</span>
+}
+
+ 

@@ -1,0 +1,36 @@
+﻿@model XCentium.Challenge.Models.ScrapedPageViewModel
+
+@{
+	Layout = null;
+}
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		@Model.TargetUri.Authority
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-4">
+
+		<h2>Words</h2>
+		<p class="lead">
+			<mark class="count">@Model.UniqueWordCount</mark>  unique words are used a
+			total of <mark class="count">@Model.TotalWordCount</mark> times
+		</p>
+
+
+		@Html.Partial("ScraperForm/_WordCloud")
+	</div>
+	<div class="col-md-7  col-md-offset-1">
+		<h2>Images</h2>
+		@Html.Partial("ScraperForm/_ImageGallery")
+	</div>
+</div>
+
+
+
+
