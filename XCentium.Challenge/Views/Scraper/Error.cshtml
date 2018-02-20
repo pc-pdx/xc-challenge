@@ -4,13 +4,12 @@
 	Layout = null;
 }
 
-<div class="layout-full-width">
-	<article class="primary">
-		<div class="component">
-			<h1>ACK!</h1>
-			<p>no good, it appears &lsquo;@Model&rsquo; is not cooperating</p>
-			<p>Perhaps try a different site (?)</p>
-			@Html.Partial("ScraperForm/_Form")
-		</div>
-	</article>
-</div>
+<h1>ACK!</h1>
+<h4>No good, very bad scrape</h4>
+<p>It appears &lsquo;@Model&rsquo; is not cooperating as it does not wish to be scraped</p>
+
+
+<p>Perhaps try a different site, or consider one of the following</p>
+
+
+@Html.Partial("_ExampleLinks")

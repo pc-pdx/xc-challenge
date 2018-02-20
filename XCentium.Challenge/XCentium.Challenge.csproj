@@ -244,6 +244,7 @@
     <Content Include="Views\Scraper\_ImageGallery.cshtml" />
     <Content Include="Views\Scraper\_WordCloud.cshtml" />
     <Content Include="Views\Scraper\Index.cshtml" />
+    <Content Include="Views\Shared\_ExampleLinks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
