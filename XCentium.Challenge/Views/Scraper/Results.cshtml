@@ -1,0 +1,39 @@
+﻿@model XCentium.Challenge.Models.ScrapedPageViewModel
+
+@{
+	Layout = null;
+}
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		
+		<p>A scan of <a href="@Model.TargetUri" target="_blank">@Model.TargetUri</a> yields the following fun <img src="http://pc-pdx.com/_img/icons/48/orange_arrow_down.png" /></p> 
+		
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-7 decorate-bucket">
+		<h2>Images</h2>
+		@Html.Partial("_ImageGallery")
+	</div>
+	<div class="col-md-5">
+
+		<h2>Words</h2>
+		<p class="lead">
+			There are <mark class="count">@Model.TotalWordCount</mark> words on the page,
+			<mark class="count">@Model.UniqueWordCount</mark> being unique.
+		</p>
+
+
+		<h3>Cloud</h3>
+		@Html.Partial("_WordCloud")
+	</div>
+</div>
+
+
+
+

@@ -44,7 +44,7 @@ namespace XCentium.Challenge.Utility
 		/// <summary>
 		///     Returns the set of words with corresponding count of occurances(frequency) within the given strings.
 		/// </summary>
-		public static IEnumerable<KeyValuePair<string, int>> GetWordFrequencyStats(IEnumerable<string> basis)
+		public static IEnumerable<KeyValuePair<string, int>> AggregateWordFrequencyStats(IEnumerable<string> basis)
 		{
 			return (basis.GroupBy(x => x.ToLowerInvariant())
 				.Select(grouping => new { grouping, count = grouping.Count() })

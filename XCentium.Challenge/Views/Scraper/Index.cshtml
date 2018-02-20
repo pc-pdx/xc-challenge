@@ -1,0 +1,17 @@
+﻿@{
+	ViewBag.Title = "scrape";
+}
+
+
+<div class="row">
+	<h1>Data Miner</h1>
+	<p>Scrape a target url and gallery'ize all the found images</p>
+</div>
+
+<div class="row">
+	@Html.Partial("_Form")
+</div>
+
+@Html.Action("Results")
+
+

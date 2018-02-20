@@ -4,12 +4,11 @@ using HtmlAgilityPack;
 
 namespace XCentium.Challenge.Services
 {
-	public class Scraper
+	internal class WebLoader
 	{
 
-		public HtmlDocument RetrieveDocument(string url)
+		public HtmlDocument LoadHtmlDocument(string url)
 		{
-
 			var web = new HtmlWeb
 			{
 				UsingCache = false //this cache can be unpredictable, leave disabled

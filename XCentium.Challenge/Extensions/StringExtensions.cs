@@ -27,8 +27,5 @@ namespace XCentium.Challenge.Extensions
 			}
 			return text;
 		}
-
 	}
-
-
 }

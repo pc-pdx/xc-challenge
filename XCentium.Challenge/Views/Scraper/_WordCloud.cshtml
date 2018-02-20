@@ -8,12 +8,8 @@
 
 @foreach (var result in Model.WordFrequencyStats.Take(10))
 {
-	<span>
-		(@result.Value)
-		<strong style="font-size: @(    (result.Value % 10) > 5 ? 5 : (result.Value % 10)  )rem">@result.Key</strong>
-		
-		 
-	</span>
+	<div>
+		<mark>@result.Count</mark> <strong style="font-size: @(result.CalculatedDisplaySize)rem">@result.Word </strong>
+	</div>
 }
 
- 

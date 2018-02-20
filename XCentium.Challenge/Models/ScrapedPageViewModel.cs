@@ -8,7 +8,7 @@ namespace XCentium.Challenge.Models
 
 		public IEnumerable<DisplayImage> ImageList { get; set; } //= new List<DisplayImage>();
 
-		public IEnumerable<KeyValuePair<string, int>> WordFrequencyStats { get; set; } //= new List<KeyValuePair<string, int>>();
+		public IList<TagCloudItem> WordFrequencyStats { get; set; } //= new List<KeyValuePair<string, int>>();
 
 		public Uri TargetUri { get; set; }
 
